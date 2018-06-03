@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLay0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/md_blue_grey_400"
+    tools:context="com.rrsaikat.calc.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/top_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/shift_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:id="@+id/float_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="@string/no_text"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="DEG"
+            android:textAlignment="center"
+            android:textColor="@color/md_white_1000" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/display_screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg">
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:cursorVisible="true"
+                android:textColorHint="@color/icons"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text="ln2"
+                android:textColor="@color/primary_text"
+                android:textSize="60sp" />
+        </LinearLayout>
+        <!--First Row-->
+    <!--Second Row Button-->
+    <LinearLayout
+        android:id="@+id/first_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:id="@+id/rcl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/no_text"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:id="@+id/sto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/no_text"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:id="@+id/m_minus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/m_minus"
+            android:textColor="@color/divider"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:theme="@style/MyButton">
+
+        <Button
+            android:id="@+id/shift"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/shift"
+            android:textColor="@color/calculator_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/rad"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/rad"
+            android:textColor="@color/calculator_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/abs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/abs"
+            android:textColor="@color/calculator_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/mr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/mr"
+            android:textColor="@color/calculator_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/ms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/ms"
+            android:textColor="@color/calculator_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/m_plus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/m_plus"
+            android:textColor="@color/calculator_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+    </LinearLayout>
+        <!--Third Row Text-->
+    <LinearLayout
+        android:id="@+id/third_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:weightSum="6">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:id="@+id/inverse_sin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/inverse_sin"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/inverse_cos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/inverse_cos"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/inverse_tan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/inverse_tan"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/expo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/expo"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/ten_power_x"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/ten_power"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+    </LinearLayout>
+        <!--Fourth Row Button-->
+    <LinearLayout
+        android:id="@+id/fourth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:theme="@style/MyButton">
+
+        <Button
+            android:id="@+id/hys"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/rnd"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/sin_sign"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/sin_sign"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/cos_sign"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/cos_sign"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/tan_sign"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/tan_sign"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/natural_log"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/natural_log"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/log"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/log"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+    </LinearLayout>
+        <!--Fifth Row Text-->
+    <LinearLayout
+        android:id="@+id/fifth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:weightSum="6">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:id="@+id/cube_root"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/cube_root"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/cube"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/cube"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/one_over_x"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/one_over_x"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/divider" />
+    </LinearLayout>
+        <!--Sixth Row Button-->
+    <LinearLayout
+        android:id="@+id/sixth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:theme="@style/MyButton">
+
+        <Button
+            android:id="@+id/x_power_y"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/x_power_y"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/square_root"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/square_root"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/x_square"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/x_square"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/percent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/percent"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/open_bracket"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/open_bracket"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/close_bracket"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/close_bracket"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+    </LinearLayout>
+        <!--Seventh Row 5 Buttons-->
+    <LinearLayout
+        android:id="@+id/seventh_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:theme="@style/MyButton">
+
+        <Button
+            android:id="@+id/seven_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/seven_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/eight_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/eight_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/nine_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/nine_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/single_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/del"
+            android:padding="8dp"
+            android:text="Del"
+            android:textAllCaps="false"
+            android:textColor="#dfded4"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/del"
+            android:padding="8dp"
+            android:text="@string/clear"
+            android:textAllCaps="false"
+            android:textColor="#dfded4"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+        <!--Eigth Row 5 Text-->
+    <LinearLayout
+        android:id="@+id/eigth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/factorial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/factorial"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/combination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/combination"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/permutation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/permutation"
+            android:textColor="@color/divider"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/divider" />
+    </LinearLayout>
+        <!--Nine Row 5 Buttons-->
+    <LinearLayout
+        android:id="@+id/ninth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:theme="@style/MyButton">
+
+        <Button
+            android:id="@+id/four_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/four_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/five_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/five_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/six_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/six_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/multiplication"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/multiplication"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/division"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/division"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+    </LinearLayout>
+        <!--Ten Row 5 Text-->
+    <LinearLayout
+        android:id="@+id/tenth_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/pi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/pi"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:id="@+id/e"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/e"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:id="@+id/comma"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/comma"
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/divider" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="@color/divider" />
+    </LinearLayout>
+        <!--Eleven Row 5 Buttons-->
+    <LinearLayout
+        android:id="@+id/Eleven_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:theme="@style/MyButton">
+
+        <Button
+            android:id="@+id/one_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/one_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/two_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/two_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/three_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/three_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/addition"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/addition"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/subtraction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/subtraction"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+    </LinearLayout>
+        <!--Twelve Row 5 Buttons-->
+    <LinearLayout
+        android:id="@+id/twelve_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:textAlignment="center">
+
+        <Button
+            android:id="@+id/zero_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/zero_button"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/dot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/dot"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/exp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/exp"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/ans"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/ans"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+
+        <Button
+            android:id="@+id/equal_sign"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/cicle_bg"
+            android:padding="8dp"
+            android:text="@string/equal_sign"
+            android:textAllCaps="false"
+            android:textColor="@color/calculator_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:theme="@style/MyButton" />
+    </LinearLayout>
+    </LinearLayout>
