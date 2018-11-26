@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 private TextView outputResult;
@@ -19,6 +20,7 @@ private TextView degreeRad;
 private boolean isDegree = false;
 private boolean isInverse = false;
 private String lastResultObtain = "";
+private String resultObject;
 private String currentDisplayedInput = "";
 private String inputToBeParsed = "";
 private Calculator mCalculator;
@@ -131,6 +133,26 @@ protected void onCreate(Bundle savedInstanceState) {
         buttonAdd.setOnClickListener(this);
         buttonPercentage.setOnClickListener(this);
         buttonEqual.setOnClickListener(this);
+        buttonAnswer.setOnClickListener(this);  // i have forgotten to add this line
+/*
+        buttonAnswer.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        Toast.makeText(MainActivity.this , "Clicked w" , Toast.LENGTH_SHORT).show();
+                        if (resultObject != null) {
+                                String enteredInput = outputResult.getText().toString();
+                                enteredInput += resultObject;
+
+                                currentDisplayedInput = enteredInput;
+                                inputToBeParsed = enteredInput;
+                                //resultObject = mCalculator.getResult(currentDisplayedInput, inputToBeParsed);
+                                outputResult.setText(removeTrailingZero(enteredInput));
+                                //currentDisplayedInput += removeTrailingZero(resultObject);
+
+                        }
+                }
+        });
+*/
         buttonDecimal.setOnClickListener(this);
         closeParenthesis.setOnClickListener(this);
         openParenthesis.setOnClickListener(this);
@@ -420,12 +442,20 @@ public void onClick(View view) {
         }else if(data.equals("=")){
                 String enteredInput = outputResult.getText().toString();
                 // call a function that will return the result of the calculate.
-                String resultObject = mCalculator.getResult(currentDisplayedInput, inputToBeParsed);
+                resultObject = mCalculator.getResult(currentDisplayedInput, inputToBeParsed);
                 outputResult.setText(removeTrailingZero(resultObject));
         }else if(data.equals("Ans")){
-                String enteredInput = outputResult.getText().toString();
-                enteredInput += lastResultObtain;
-                outputResult.setText(enteredInput);
+                if (resultObject != null) {
+                        String enteredInput = outputResult.getText().toString();
+                        enteredInput += resultObject;
+                        //currentDisplayedInput = enteredInput;
+                        inputToBeParsed = enteredInput;
+                        outputResult.setText(removeTrailingZero(enteredInput));
+
+                }else {
+                        Toast.makeText(MainActivity.this , "No Answer found" , Toast.LENGTH_SHORT).show();
+                }
+
         }else if(data.equals("SHIFT")){
         if(!isInverse){
                  isInverse = true;
